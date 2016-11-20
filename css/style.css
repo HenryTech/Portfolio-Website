@@ -1,0 +1,36 @@
+/* Jumbotron background pic element is styled right here */
+
+.jumbotron {
+	margin-top: -20px;
+	margin-bottom: 0px;
+	background-image: url(../img/jumbotron-bgimage.jpg);
+	background-position: 50% 25%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: black;
+	text-shadow: white 0.1em 0.1em 0.1em;
+	height: 500px;
+}
+
+
+/* Content element is for the navbar, to give the body some space to make room for the fixed navbar on top. I have also customized the background and text colors */
+
+.content {
+	padding-top: 70px;
+}
+
+.navbar-default {
+	border: none;
+	background-color: #e8e8e9;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #054a9b;
+}
+
+/* Wanted to include my own logo with the navbar, but it was spaced funny, so I moved it up slightly with this wee element. */
+
+.navbar-brand {
+	margin-top: -10px;
+}
+
