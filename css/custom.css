@@ -2,7 +2,7 @@
 .navbar-brand>img {
 	width: 30px;
 	height: 30px;
-	margin-top: 3px;
+	margin-top: 5px;
 }
 
 /* Let's get the active navbar elements to match the eye color in the custom logo */
