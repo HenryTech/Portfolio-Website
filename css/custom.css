@@ -1,0 +1,36 @@
+/* Styling my navbar logo */
+.navbar-brand>img {
+	width: 30px;
+	height: 30px;
+	margin-top: 3px;
+}
+
+/* Button styling on Home area */
+.btn-lg {
+	margin: 5px 0px 5px 1px;
+	border-radius: 0;
+	color: #a3a3a3;
+	text-transform: initial;
+	background-color rgba(0,0,0,0.4);
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.btn-lg:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,.4);
+}
+
+.btn-lg:visited {
+	margin: 5px 0px 5px 1px;
+	border-radius: 0;
+	color: #a3a3a3;
+	text-transform: initial;
+	background-color rgba(0,0,0,0.4);
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-lg:visited:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,.4);
+}

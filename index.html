@@ -1,110 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Sean Henry | Code Wrangler</title>
-</head>
-	
-<body>
-<!--Collapsible navbar w/ hamburger menu including custom logo -->
-<nav class="navbar navbar-default">
-	<div class="container">
-		<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
-				<span class="sr-only"> Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a href="index.html" class="navbar-brand">
-				<image src="img/Seanlogo.png" alt="SeanLogo" style="width: 35px; height: 35px"></image>
-			</a>
-		</div>
-		<div class="collapse navbar-collapse" id="collapsemenu">
-			<ul class="nav navbar-nav">
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#work-history">Work History</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-<!-- Jumbotron header including background image. .jumbotron-image-background and #backgroundcolor added so some opacity could be applied -->
-<div class="jumbotron">
-	<div class="container-fluid">
-		<h1 class="text-center">&lt;Sean Henry/></h1>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sean Henry | Code Wrangler</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap and Font Awesome css-->
+    <!-- we use cdn but you can also include local files located in css directory-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Google fonts - Montserrat for headings, Cardo for copy-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- ekko lightbox-->
+    <link rel="stylesheet" href="css/ekko-lightbox.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <!-- intro-->
+    <section id="intro" style="background-image: url('img/stjohns.jpg');" class="intro">      
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+              <p class="italic"></p>
+              <h1>&lt;Sean Henry/></h1>
+              <p class="italic">Code Wrangler</p>
+			  <a class="btn btn-lg" href="https://www.linkedin.com/in/henrytech" target="_blank">LinkedIn <span class="glyphicon glyphicon-new-window"></span></a>
+			  <a class="btn btn-lg" href="https://github.com/HenryTech" target="_blank">GitHub <span class="glyphicon glyphicon-new-window"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- intro end-->
+    <!-- navbar-->
+    <header class="header">
+      <div class="sticky-wrapper">
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-btn btn-sm navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#intro" class="navbar-brand scroll-to"><img src="img/seanlogo.png" alt=""></a>
+            </div>
+            <div id="navigation" class="collapse navbar-collapse navbar-right">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#intro">Home</a></li>
+                <li><a href="#about">About </a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#text">Work History</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /.navbar-->
+    <!-- about-->
+    <section id="about" class="text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="heading">About me</h2>
+            <p class="lead">Bright. Curious. Friendly.</p>
+            <p>I am a self-starter who loves learning and solving problems as well as teaching others. I know how to listen well, and am excellent at both written and verbal communication. Smiles come easily to me, and I'm engaging and easy to get along with.</p>
+            <p>My interests are wide-ranging and include movies, reading fiction and non-fiction, attending live music performances, cooking excellent meals, bicycling and hiking.</p>
+			<p>Although I've spent the last 18 years working in semiconductor manufacturing (nearly 13 years at the same company), I'm now attending The Tech Academy and am rapidly developing a working knowledge of over a half-dozen different programming languages.</p>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+            <p><img src="img/portrait.jpg" alt="" class="img-responsive img-circle"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end-->
+    <!-- Services-->
+    <section id="services" style="background-color: #eee">
+      <div class="container">
+        <div class="row services">
+          <div class="col-md-12">
+            <h2 class="heading">Skills</h2>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-desktop"></i></div>
+                  <h4>Webdesign</h4>
+                  <p>I have a working knowledge of HTML5, CSS3 and Bootstrap.</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-print"></i></div>
+                  <h4>Print</h4>
+                  <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural.</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-globe"></i></div>
+                  <h4>SEO and SEM</h4>
+                  <p>Am terminated it excellence invitation projection as. She graceful shy. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services end-->
+    
+    <!-- Portfolio / gallery-->
+    <section id="portfolio" class="gallery">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12 col-lg-8">
+                <h2 class="heading">Portfolio</h2>
+                <p>Put your portfolio or gallery images here for example. Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh. </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-1.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 1" data-footer="Some footer information"><img src="img/portfolio-1.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-2.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 2" data-footer="Some footer information"><img src="img/portfolio-2.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-3.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 3" data-footer="Some footer information"><img src="img/portfolio-3.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-4.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 4" data-footer="Some footer information"><img src="img/portfolio-4.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 5" data-footer="Some footer information"><img src="img/portfolio-5.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 6" data-footer="Some footer information"><img src="img/portfolio-6.jpg" alt="" class="img-responsive"></a></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-7.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 7" data-footer="Some footer information"><img src="img/portfolio-7.jpg" alt="" class="img-responsive"></a></div>
+              </div></a>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-8.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 8" data-footer="Some footer information"><img src="img/portfolio-8.jpg" alt="" class="img-responsive"></a></div>
+              </div></a>
+              <div class="col-sm-4">
+                <div class="box"><a href="img/portfolio-9.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Portfolio image 9" data-footer="Some footer information"><img src="img/portfolio-9.jpg" alt="" class="img-responsive"></a></div>
+              </div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio / gallery end-->
+    <!-- text page-->
+    <section id="text" style="background-color: #333;" class="text-page section-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading">Work history</h2>
+            <dl class="dl-horizontal">
+		<dt><strong>Maxim Integrated</strong><br>12/03-9/16</dt>
+		<dd>As a Yield Engineering Tech, worked closely with senior engineering on both improvement projects and manufacturing excursions, writing script-based programs on and operating defect-detection tools and scanning electron microscope. Also received some training and operating experience on FIB system. Member of Emergency Response Team for ~9 years.</dd>
 		<br>
-		<p>I am a self-starter who loves learning and solving problems as well as teaching. I know how to listen well, and am excellent at both written and verbal communication. Smiles come easily to me, and I'm engaging and easy to get along with.</p>
-		<p>My interests are wide-ranging and include movies, reading fiction and non-fiction, attending live music performances, cooking locally-sourced meals, bicycling and hiking.</p>
-	</div>
-</div>
-<br>
-<!-- Skills section -->
-<div class="skills container" id="skills">
-	<h2>Skills</h2>
-	<div class="row">	
-		<section class="col-sm-3">
-			<h3>Website Development</h3>
-			<p>HTML 5<br>CSS 3<br>WordPress</p>
-		</section>
-		<section class="col-sm-3">
-			<p>More stuff</p>
-		</section>
-		<section class="col-sm-3">
-			
-		</section>	
-	</div>
-
-</div>
-<br>
-<!-- Projects section -->
-<div>
-</div>
-<br>
-<!-- Work history section -->
-<div class="container-fluid" id="work-history">
-	<dl class="dl-horizontal">
-		<dt><mark>Maxim Integrated</mark><br>12/03-9/16</dt>
-		<dd>Operated manufacturing tools and managed WIP in all areas of Photo. As a Yield Engineering Technician, worked closely with senior engineering on both improvement projects and manufacturing excursions, writing script-based programs on and operating Orbot, KLA2139 system, AIT and SEMVision. Also received some training and operating experience on FIB system. Member of Emergency Response Team for ~9 years.</dd>
-		<br>
-		<dt><mark>Big Graphics, Inc.</mark><br>12/02 through 12/03</dt>
+		<dt><strong>Big Graphics, Inc.</strong><br>12/02 through 12/03</dt>
 		<dd>Operated and maintained large (5’ x 12’) silkscreen press and large (5’ x 8’) inkjet printer in a manufacturing environment.</dd>
 		<br>
-		<dt><mark>Kelly Services</mark><br>4/02 through 11/02</dt>
-		<dd>Working at Intel Fab 15.  Duties include ensuring WIP keeps moving, dealing with simple tool issues and delegating more complex ones to specialists, and some basic preventative maintenance.</dd>
+		<dt><strong>Kelly Services</strong><br>4/02 through 11/02</dt>
+		<dd>Worked at Intel Fab 15. Duties included ensuring WIP kept moving, dealing with simple tool issues and delegating more complex ones to specialists, and some basic preventative maintenance.</dd>
 		<br>
-		<dt><mark>IDT, Inc.</mark><br>6/97 through 10/01</dt>
-		<dd>Started as a manufacturing tech and was trained in both the Photo and Sort areas.  After thoroughly training in Photo (manufacturing and maintenance, including all PMs below quarterly), was promoted to R&D technician.  Was responsible for interpreting R&D engineers’ Special Test Requests, expediting R&D and hot manufacturing lots,  contacting R&D engineers and upper management during night shift, starting test lots and performing tasks for the R&D engineers.</dd>
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	</dl>
-
-
-
-
-
-
-
-</div>
-	
-	
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>	
-</body>
-
+		<dt><strong>IDT, Inc.</strong><br>6/97 through 10/01</dt>
+		<dd>After being fully trained in two areas (including operations and maintenance), was promoted to R&D technician. Was responsible for interpreting R&D engineers’ Special Test Requests, expediting R&D and hot manufacturing lots, contacting R&D engineers and upper management during night shift, starting test lots and performing tasks for the R&D engineers.</dd>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- text page end-->
+    <!-- contact-->
+    <section id="contact" style="background-color: #fff;" class="text-page"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading">Contact</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <form id="contact-form" method="post" action="#" class="contact-form">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="name">Your firstname *</label>
+                          <input type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="surname">Your lastname *</label>
+                          <input type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Your email *</label>
+                      <input type="email" name="email" placeholder="Enter your  email" required="required" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Your message for us *</label>
+                      <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
+                    </div>
+                    <div class="text-center">
+                      <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <p>Feel free to contact me if you have any questions about my abilities or desire to retain my services.</p>
+                <p></p>
+                <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="map"></div>
+    <footer style="background-color: #111;" class="section-inverse">
+      <div class="container"> 
+        <div class="row copyright">
+          <div class="col-md-6">
+            <p>&copy;2016 Sean Henry</p>
+          </div>
+          <div class="col-md-6">
+            <p class="credit">Template by <a href="https://bootstrapious.com/free-templates">Bootstrapious.com</a></p>
+            <!-- Please do not remove the backlink to us unless you support the development at https://bootstrapious.com/donate. It is part of the license conditions. Thanks for understanding :) -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Javascript files-->
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <!-- Bootstrap CDN-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- jQuery Cookie - For Demo Purpose-->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- Lightbox-->
+    <script src="js/ekko-lightbox.js"> </script>
+    <!-- Sticky + Scroll To scripts for navbar-->
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <!-- google maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
+    <script src="js/gmaps.js"></script>
+    <!-- main script-->
+    <script src="js/front.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
 </html>
