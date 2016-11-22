@@ -5,6 +5,11 @@
 	margin-top: 3px;
 }
 
+/* Let's get the active navbar elements to match the eye color in the custom logo */
+.navbar-default .navbar-nav>.active>a:focus {
+	border-bottom: solid 1px #6091bc;
+}
+
 /* Button styling on Home area */
 .btn-lg {
 	margin: 5px 0px 5px 1px;
