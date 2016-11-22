@@ -9,6 +9,9 @@
 .navbar-default .navbar-nav>.active>a {
 	border-bottom: solid 1px #6091bc;
 }
+.navbar-default .navbar-nav>.active>a:focus {
+	border-bottom: solid 1px #6091bc;
+}
 
 /* Button styling on Home area */
 .btn-lg {
