@@ -6,7 +6,7 @@
 }
 
 /* Let's get the active navbar elements to match the eye color in the custom logo */
-.navbar-default .navbar-nav>.active>a:focus {
+.navbar-default .navbar-nav>.active>a {
 	border-bottom: solid 1px #6091bc;
 }
 
