@@ -37,7 +37,7 @@ $(function() {
       }
 
 
-  var dataString = '<p><strong>Name: </strong> '+ name + '</p><p><strong>Email: </strong> ' + email + '</p><p><strong>Message: </strong> ' + message + '</p>';
+  var dataString = '<p><strong>Name: </strong> '+ name + '</p><p><strong>Surname: </strong> '+ surname + '</p><p><strong>Email: </strong> ' + email + '</p><p><strong>Message: </strong> ' + message + '</p>';
   $.ajax({
     type: "POST",
     url: "send.php",
@@ -52,6 +52,7 @@ $(function() {
 
      // clear input field values
       $("#name").val('');
+	  $("#surname").val('');
       $("#email").val('');
       $("#message").val('');
 
