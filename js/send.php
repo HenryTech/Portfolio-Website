@@ -14,7 +14,7 @@ if( isset($_POST) ){
 function sendMailgun($data) {
 
   $api_key = 'key-bc21c4a669acb4350c059d495e889665';
-  $api_domain = 'https://api.mailgun.net/v3/seanhenry.tech';
+  $api_domain = 'seanhenry.tech';
   $send_to = 'fidelicatessen@gmail.com';
 
     // sumbission data
@@ -32,7 +32,7 @@ function sendMailgun($data) {
 
   $config = array();
   $config['api_key'] = $api_key;
-  $config['api_url'] = 'https://api.mailgun.net/v2/'.$api_domain.'/messages';
+  $config['api_url'] = 'https://api.mailgun.net/v3/'.$api_domain.'/messages';
 
   $message = array();
   $message['from'] = $reply;
