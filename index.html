@@ -204,7 +204,7 @@
             <h2 class="heading">Contact</h2>
             <div class="row">
               <div class="col-md-6">
-                <form id="contact-form" method="post" action="#" class="contact-form">
+                <form id="contact-form" method="post" action="" class="contact-form">
 				
 				<div class="messages"></div>
 				
@@ -212,46 +212,58 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="name">Your firstname *</label>
-                          <input type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control" data-error="Firstname is required.">
+							<label for="name" id="name_label">Your first name *</label>
+<!-- Error message in case of name error -->
+							<label class="error" for="name" id="name_error">This field is required</label>
+							
+							<input type="text" name="name" id="name" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">
 						  
-						  <div class="help-block with-errors"></div>
+							<div class="help-block with-errors"></div>
 						  
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label for="surname">Your lastname *</label>
-                          <input type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control" data-error="Lastname is required.">
+							<label for="surname">Your last name *</label>
+<!-- Error message in case of surname error -->
+							<label class="error" for="surname" id="surname_error">This field is required</label>
+							
+							<input type="text" name="surname" id="surname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">
 						  
-						  <div class="help-block with-errors"></div>
+							<div class="help-block with-errors"></div>
 						  
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="surname">Your email *</label>
-                      <input type="email" name="email" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">
+                      <label for="email">Your email *</label>
+<!-- Error message in case of email error -->
+						<label class="error" for="email" id="email_error">This field is required</label>
+						
+						<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">
 					  
-					  <div class="help-block with-errors"></div>
+						<div class="help-block with-errors"></div>
 					  
                     </div>
                     <div class="form-group">
-                      <label for="surname">Your message for me *</label>
-                      <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>
+                      <label for="message">Your message for me *</label>
+<!-- Error message in case of name error -->
+						<label class="error" for="message" id="message_error">This field is required</label>
+						
+						<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>
 					  
-					  <div class="help-block with-errors"></div>
+						<div class="help-block with-errors"></div>
 					  
                     </div>
                     <div class="text-center">
-                      <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
+                      <input type="submit" name="name" id="submit" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form>
               </div>
               <div class="col-md-6">
                 <p>Feel free to contact me if you have any questions about my abilities or desire to retain my services. I look forward to hearing from you!</p>
-                <image id="phone" src="img/phone.jpg" class="img-responsive img-rounded" alt="Antique Phone">
+                <image id="phone" src="img/phone.jpg" class="img-responsive" alt="Antique Phone">
  <!-- Commenting out the social media section
 
  <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p> -->
@@ -283,8 +295,8 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
     <!-- Bootstrap CDN-->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!-- For a working contact sheet 
-	<script src="js/contact.js"></script> -->
+	<!-- For a working contact sheet  -->
+	<script src="js/contact.js"></script>
     <!-- jQuery Cookie - For Demo Purpose-->
     <script src="js/jquery.cookie.js"></script>
     <!-- Lightbox-->
