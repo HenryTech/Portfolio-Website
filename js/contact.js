@@ -11,7 +11,7 @@ $(function() {
         $("#name").focus();
         return false;
       }
-	  var surname = $("#name").val();
+	  var surname = $("#surname").val();
         if (surname == "") {
         $("#surname_error").show();
         $("#surname").focus();
