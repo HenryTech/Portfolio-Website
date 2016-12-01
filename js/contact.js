@@ -1,9 +1,10 @@
 $(function() {
     $('.error').hide();
-    $(".subbutton").click(function() {
+    $("#contact-form").on("submit",function(event) {
 
       // validate and process form here
-
+	
+	event.preventDefault();
       $('.error').hide();
       var name = $("#name").val();
         if (name == "") {
