@@ -212,6 +212,31 @@
     </section>
     <!-- text page end-->
     <!-- contact-->
+	<script>
+	function _(id){ return document.getElementById(id); }
+	
+	function submitForm(){
+				_("submit").disabled = true; <!-- user can't press this over and over again -->				
+				var formdata = new FormData();
+				formdata.append( "fname", _("fname").value );
+				formdata.append( "lname", _("lname").value );
+				formdata.append( "email", _("email").value );				
+				formdata.append( "message", _("message").value );
+				var ajax = new XMLHttpRequest();
+				ajax.open( "POST", "post.php" );
+				ajax.onreadystatechange = function() {
+					if(ajax.readyState == 4 && ajax.status == 200) {
+						if(ajax.responseText == "success") {
+							_("success").innerHTML = 'Thanks '+_("fname").value+', your message has been successfully sent!';
+						} else {
+							_("status").innerHTML = ajax.responseText;
+							_("submit").disabled = false;
+						}
+					}
+				}
+				ajax.send( formdata );
+			}
+	</script>
     <section id="contact" style="background-color: #fff;" class="text-page"> 
       <div class="container">
         <div class="row">
@@ -219,11 +244,11 @@
             <h2 class="heading">Contact</h2>
             <div class="row">
               <div class="col-md-6">
-                <!-- Commenting out contact form until I can get this sucker to actually work. Remember to add back in the comment end brackets on all comments when adding it back in!
+                <!-- Commenting out contact form until I can get this sucker to actually work. Remember to add back in the comment end brackets on all comments when adding it back in! -->
 				
-				<form id="contact-form" method="post" action="" class="contact-form">
+				<form id="contact-form" onsubmit="submitForm(); return false;" class="contact-form">
 				
-				<div class="messages"></div>
+				
 				
                   <div class="controls">
                     <div class="row">
@@ -231,9 +256,9 @@
                         <div class="form-group">
 							<label for="name" id="name_label">Your first name *</label>
 <!-- Error message in case of name error --
-							<label class="error" for="name" id="name_error">This field is required</label>
+							<label class="error" for="name" id="name_error">This field is required</label> -->
 							
-							<input type="text" name="name" id="name" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">
+							<input type="text" name="firstname" id="fname" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">
 						  
 							<div class="help-block with-errors"></div>
 						  
@@ -243,9 +268,9 @@
                         <div class="form-group">
 							<label for="surname">Your last name *</label>
 <!-- Error message in case of surname error --
-							<label class="error" for="surname" id="surname_error">This field is required</label>
+							<label class="error" for="surname" id="surname_error">This field is required</label> -->
 							
-							<input type="text" name="surname" id="surname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">
+							<input type="text" name="surname" id="lname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">
 						  
 							<div class="help-block with-errors"></div>
 						  
@@ -255,7 +280,7 @@
                     <div class="form-group">
                       <label for="email">Your email *</label>
 <!-- Error message in case of email error --
-						<label class="error" for="email" id="email_error">This field is required</label>
+						<label class="error" for="email" id="email_error">This field is required</label> -->
 						
 						<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">
 					  
@@ -265,7 +290,7 @@
                     <div class="form-group">
                       <label for="message">Your message for me *</label>
 <!-- Error message in case of name error --
-						<label class="error" for="message" id="message_error">This field is required</label>
+						<label class="error" for="message" id="message_error">This field is required</label> -->
 						
 						<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>
 					  
@@ -273,19 +298,21 @@
 					  
                     </div>
                     <div class="text-center">
-                      <input type="submit" name="name" id="submit" value="Send message" class="btn btn-primary btn-block">
+                      <input type="submit" name="submit" id="submit" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
-                </form> -->
+                </form> 
 				
-<!-- Note that I have altered the paragraph placement below to make it look better without the contact form -->
-				<p>My email address is fidelicatessen@gmail.com. Feel free to contact me if you have any questions about my abilities or desire to retain my services. I look forward to hearing from you!</p>
+<!-- Note that I have altered the paragraph placement below to make it look better without the contact form 
+				<p>My email address is fidelicatessen@gmail.com. Feel free to contact me if you have any questions about my abilities or desire to retain my services. I look forward to hearing from you!</p> -->
               </div>
 			  
 
               <div class="col-md-6">
                 
                 <image id="phone" src="img/phone.jpg" class="img-responsive" alt="Antique Phone">
+				<br><br><br>
+				<div class="messages" id="success"></div>
  <!-- Commenting out the social media section
 
  <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p> -->
