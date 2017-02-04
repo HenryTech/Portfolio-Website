@@ -86,67 +86,75 @@
     </section>
     <!-- about end-->
     <!-- Services-->
-    <section id="services" style="background-color: #eee">
-      <div class="container">
+<section id="services" style="background-color: #eee">
+	<div class="container">
         <div class="row services">
-          <div class="col-md-12">
-            <h2 class="heading">Skills</h2>
-            <div class="row">
-	      <div class="col-sm-4">
-                <div class="box">
-                  <div class="icon"><i class="fa fa-html5"></i><i class="fa fa-css3"></i></div>
-                  <h4>Webdesign</h4>
-                  <p>I have a working knowledge of HTML5, CSS3, Bootstrap and WordPress.</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="box">
-                  <div class="icon"><i class="fa fa-pencil-square-o"></i></div>
-                  <h4>Documentation</h4>
-                  <p>I have over 10 years experience in writing technical specs and carefully documenting my activities and any changes made to shared systems.</p>
-                </div>
-              </div> 
-	      <div class="col-sm-4">
-		<div class="box">
-			<div class="icon"><i class="fa fa-database"></i></div>
-			  <h4>DBA & SQL</h4>
-			  <p>I have a working knowledge of database management and am well-versed in all aspects of SQL.</p>
+			<div class="col-md-12">
+				<h2 class="heading">Skills</h2>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><i class="fa fa-html5"></i><i class="fa fa-css3"></i></div>
+								<h4>Webdesign</h4>
+								<p>I have a working knowledge of HTML5, CSS3, Bootstrap and WordPress.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><i class="fa fa-pencil-square-o"></i></div>
+							<h4>Documentation</h4>
+							<p>I have over 10 years experience in writing technical specs and carefully documenting my activities and any changes made to shared systems.</p>
+						</div>
+					</div> 
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><i class="fa fa-database"></i></div>
+							<h4>DBA & SQL</h4>
+							<p>I have a working knowledge of database management and am well-versed in all aspects of SQL.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><image class="custom-icon" src="img/jslogo2.png"></image></div>
+							<h4>JScript & jQuery</h4>
+							<p>I am thoroughly familiar with both JavaScript and jQuery and can make web pages remarkably dynamic using these tools.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><image class="custom-icon" src="img/pythonlogo.png"></image></div>
+							<h4>Python</h4>
+							<p>I am well-versed in Python and can code in both versions 2 and 3.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="box">
+							<div class="icon"><image class="custom-icon" src="img/VSlogo.png"></image></div>
+							<h4>C# & Visual Studio</h4>
+							<p>I am proficient in C# and other aspects of Visual Studio such as Web Forms, ASP.NET and MVC.</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
-	      </div>
-	    </div>
-	    <div class="row">
-	      <div class="col-sm-4">
-		<div class="box">
-			<div class="icon"><image class="custom-icon" src="img/jslogo2.png"></image></div>
-			  <h4>JScript & jQuery</h4>
-			  <p>I am thoroughly familiar with both JavaScript and jQuery and can make web pages remarkably dynamic using these tools.</p>
-		</div>
-	      </div>
-	      <div class="col-sm-4">
-		<div class="box">
-			<div class="icon"><image class="custom-icon" src="img/pythonlogo.png"></image></div>
-			  <h4>Python</h4>
-			  <p>I am well-versed in Python and can code in both versions 2 and 3.</p>
-		</div>
-	      </div>		  
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services end-->
+	</div>
+</section>
+<!-- Services end-->
     
-    <!-- Portfolio / gallery-->
-    <section id="portfolio" class="gallery">
-      <div class="container clearfix">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-12 col-lg-8">
-                <h2 class="heading">Portfolio</h2>
-                <p>A portfolio of some projects I've worked on. Check back regularly to see new stuff! </p>
-              </div>
-            </div>
+<!-- Portfolio / gallery-->
+<section id="portfolio" class="gallery">
+	<div class="container clearfix">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12 col-lg-8">
+						<h2 class="heading">Portfolio</h2>
+						<p>A portfolio of some projects I've worked on. Check back regularly to see new stuff! </p>
+					</div>
+				</div>
 <!--  I have no projects yet, so this is commented out.
 
 			<div class="row">
@@ -213,8 +221,8 @@
     <!-- text page end-->
     <!-- contact-->
 	<script>
-	function _(id){ return document.getElementById(id); }
-	
+	// This is the javascript that handles the ajax call to post.php
+	function _(id){ return document.getElementById(id); }	
 	function submitForm(){
 				_("submit").disabled = true; <!-- user can't press this over and over again -->				
 				var formdata = new FormData();
@@ -243,97 +251,59 @@
           <div class="col-md-12">
             <h2 class="heading">Contact</h2>
             <div class="row">
-              <div class="col-md-6">
-                <!-- Commenting out contact form until I can get this sucker to actually work. Remember to add back in the comment end brackets on all comments when adding it back in! -->
-				
-				<form id="contact-form" onsubmit="submitForm(); return false;" class="contact-form">
-				
-				
-				
+              <div class="col-md-6">                				
+				<form id="contact-form" onsubmit="submitForm(); return false;" class="contact-form">				
                   <div class="controls">
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="form-group">
-							<label for="name" id="name_label">Your first name *</label>
-<!-- Error message in case of name error --
-							<label class="error" for="name" id="name_error">This field is required</label> -->
-							
-							<input type="text" name="firstname" id="fname" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">
-						  
-							<div class="help-block with-errors"></div>
-						  
+							<label for="name" id="name_label">Your first name *</label>							
+							<input type="text" name="firstname" id="fname" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">	  
+							<div class="help-block with-errors"></div>						  
                         </div>
                       </div>
                       <div class="col-sm-6">
                         <div class="form-group">
-							<label for="surname">Your last name *</label>
-<!-- Error message in case of surname error --
-							<label class="error" for="surname" id="surname_error">This field is required</label> -->
-							
-							<input type="text" name="surname" id="lname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">
-						  
-							<div class="help-block with-errors"></div>
-						  
+							<label for="surname">Your last name *</label>							
+							<input type="text" name="surname" id="lname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">			  
+							<div class="help-block with-errors"></div>						  
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="email">Your email *</label>
-<!-- Error message in case of email error --
-						<label class="error" for="email" id="email_error">This field is required</label> -->
-						
-						<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">
-					  
-						<div class="help-block with-errors"></div>
-					  
+                      <label for="email">Your email *</label>						
+						<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">					  
+						<div class="help-block with-errors"></div>					  
                     </div>
                     <div class="form-group">
-                      <label for="message">Your message for me *</label>
-<!-- Error message in case of name error --
-						<label class="error" for="message" id="message_error">This field is required</label> -->
-						
-						<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>
-					  
-						<div class="help-block with-errors"></div>
-					  
+                      <label for="message">Your message for me *</label>						
+						<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>		  
+						<div class="help-block with-errors"></div>					  
                     </div>
                     <div class="text-center">
                       <input type="submit" name="submit" id="submit" value="Send message" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form> 
-				
-<!-- Note that I have altered the paragraph placement below to make it look better without the contact form 
-				<p>My email address is fidelicatessen@gmail.com. Feel free to contact me if you have any questions about my abilities or desire to retain my services. I look forward to hearing from you!</p> -->
               </div>
-			  
-
-              <div class="col-md-6">
-                
+              <div class="col-md-6">                
                 <image id="phone" src="img/phone.jpg" class="img-responsive" alt="Antique Phone">
 				<br><br><br>
 				<div class="messages" id="success"></div>
- <!-- Commenting out the social media section
-
- <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p> -->
+ 
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-<!-- Commenting out the map section
-
-    <div id="map"></div> -->
     <footer style="background-color: #111;" class="section-inverse">
       <div class="container"> 
         <div class="row copyright">
           <div class="col-md-6">
             <p>&copy;2016 Sean Henry</p>
           </div>
-          <div class="col-md-6">
-            <p class="credit">Template by <a href="https://bootstrapious.com/free-templates">Bootstrapious.com</a></p>
-            <!-- Please do not remove the backlink to us unless you support the development at https://bootstrapious.com/donate. It is part of the license conditions. Thanks for understanding :) -->
+          <div class="col-md-6">            
           </div>
         </div>
       </div>
@@ -343,9 +313,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
     <!-- Bootstrap CDN-->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!-- For a working contact sheet  -->
-	<script src="js/contact.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
     <!-- jQuery Cookie - For Demo Purpose-->
     <script src="js/jquery.cookie.js"></script>
     <!-- Lightbox-->
