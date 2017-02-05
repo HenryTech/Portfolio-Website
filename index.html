@@ -216,16 +216,17 @@
 							<img src="img/horror.jpg" class="img-responsive portpix" alt="">
 						</a>
 					</div>
-					<!-- <div class="col-sm-4 portfolio-item">
+					<div class="col-sm-4 portfolio-item">
 						<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 							<div class="caption">
 								<div class="caption-content">
+									<p>Student Database</p>
 									<i class="fa fa-search-plus fa-3x"></i>
 								</div>
 							</div>
-							<img src="img/portfolio-6.png" class="img-responsive" alt="">
+							<img src="img/students.jpg" class="img-responsive portpix" alt="">
 						</a>
-					</div> -->			
+					</div>		
 				</div>
 			</div>
 		</div>
@@ -235,119 +236,120 @@
 
 
 <!-- text page-->
-    <section id="text" style="background-color: #333;" class="text-page section-inverse">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading">Work history</h2>
-            <dl class="dl-horizontal">
-		<dt><strong>Maxim Integrated</strong><br>12/03-9/16</dt>
-		<dd>As a Yield Engineering Tech, worked closely with senior engineering on both improvement projects and manufacturing excursions, writing script-based programs on and operating defect-detection tools and scanning electron microscope. Also received some training and operating experience on FIB system. Member of Emergency Response Team for ~9 years.</dd>
-		<br>
-		<dt><strong>Big Graphics, Inc.</strong><br>12/02 through 12/03</dt>
-		<dd>Operated and maintained large (5’ x 12’) silkscreen press and large (5’ x 8’) inkjet printer in a manufacturing environment.</dd>
-		<br>
-		<dt><strong>Kelly Services</strong><br>4/02 through 11/02</dt>
-		<dd>Worked at Intel Fab 15. Duties included ensuring WIP kept moving, dealing with simple tool issues and delegating more complex ones to specialists, and some basic preventative maintenance.</dd>
-		<br>
-		<dt><strong>IDT, Inc.</strong><br>6/97 through 10/01</dt>
-		<dd>After being fully trained in two areas (including operations and maintenance), was promoted to R&D technician. Was responsible for interpreting R&D engineers’ Special Test Requests, expediting R&D and hot manufacturing lots, contacting R&D engineers and upper management during night shift, starting test lots and performing tasks for the R&D engineers.</dd>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- text page end-->
-    <!-- contact-->
-	<script>
-	// This is the javascript that handles the ajax call to post.php
+<section id="text" style="background-color: #333;" class="text-page section-inverse">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="heading">Work history</h2>
+				<dl class="dl-horizontal">
+				<dt><strong>Maxim Integrated</strong><br>12/03-9/16</dt>
+				<dd>As a Yield Engineering Tech, worked closely with senior engineering on both improvement projects and manufacturing excursions, writing script-based programs on and operating defect-detection tools and scanning electron microscope. Also received some training and operating experience on FIB system. Member of Emergency Response Team for ~9 years.</dd>
+				<br>
+				<dt><strong>Big Graphics, Inc.</strong><br>12/02 through 12/03</dt>
+				<dd>Operated and maintained large (5’ x 12’) silkscreen press and large (5’ x 8’) inkjet printer in a manufacturing environment.</dd>
+				<br>
+				<dt><strong>Kelly Services</strong><br>4/02 through 11/02</dt>
+				<dd>Worked at Intel Fab 15. Duties included ensuring WIP kept moving, dealing with simple tool issues and delegating more complex ones to specialists, and some basic preventative maintenance.</dd>
+				<br>
+				<dt><strong>IDT, Inc.</strong><br>6/97 through 10/01</dt>
+				<dd>After being fully trained in two areas (including operations and maintenance), was promoted to R&D technician. Was responsible for interpreting R&D engineers’ Special Test Requests, expediting R&D and hot manufacturing lots, contacting R&D engineers and upper management during night shift, starting test lots and performing tasks for the R&D engineers.</dd>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- text page end-->
+	
+<!-- contact-->
+<script>
+// This is the javascript that handles the ajax call to post.php
 	function _(id){ return document.getElementById(id); }	
 	function submitForm(){
-				_("submit").disabled = true; <!-- user can't press this over and over again -->				
-				var formdata = new FormData();
-				formdata.append( "fname", _("fname").value );
-				formdata.append( "lname", _("lname").value );
-				formdata.append( "email", _("email").value );				
-				formdata.append( "message", _("message").value );
-				var ajax = new XMLHttpRequest();
-				ajax.open( "POST", "post.php" );
-				ajax.onreadystatechange = function() {
-					if(ajax.readyState == 4 && ajax.status == 200) {
-						if(ajax.responseText == "success") {
-							_("success").innerHTML = 'Thanks '+_("fname").value+', your message has been successfully sent!';
-						} else {
-							_("status").innerHTML = ajax.responseText;
-							_("submit").disabled = false;
-						}
-					}
+		_("submit").disabled = true; <!-- user can't press this over and over again -->				
+		var formdata = new FormData();
+		formdata.append( "fname", _("fname").value );
+		formdata.append( "lname", _("lname").value );
+		formdata.append( "email", _("email").value );				
+		formdata.append( "message", _("message").value );
+		var ajax = new XMLHttpRequest();
+		ajax.open( "POST", "post.php" );
+		ajax.onreadystatechange = function() {
+			if(ajax.readyState == 4 && ajax.status == 200) {
+				if(ajax.responseText == "success") {
+					_("success").innerHTML = 'Thanks '+_("fname").value+', your message has been successfully sent!';
+				} else {
+					_("status").innerHTML = ajax.responseText;
+					_("submit").disabled = false;
 				}
-				ajax.send( formdata );
 			}
-	</script>
-    <section id="contact" style="background-color: #fff;" class="text-page"> 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading">Contact</h2>
-            <div class="row">
-              <div class="col-md-6">                				
-				<form id="contact-form" onsubmit="submitForm(); return false;" class="contact-form">				
-                  <div class="controls">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="form-group">
-							<label for="name" id="name_label">Your first name *</label>							
-							<input type="text" name="firstname" id="fname" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">	  
-							<div class="help-block with-errors"></div>						  
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="form-group">
-							<label for="surname">Your last name *</label>							
-							<input type="text" name="surname" id="lname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">			  
-							<div class="help-block with-errors"></div>						  
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Your email *</label>						
-						<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">					  
-						<div class="help-block with-errors"></div>					  
-                    </div>
-                    <div class="form-group">
-                      <label for="message">Your message for me *</label>						
-						<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>		  
-						<div class="help-block with-errors"></div>					  
-                    </div>
-                    <div class="text-center">
-                      <input type="submit" name="submit" id="submit" value="Send message" class="btn btn-primary btn-block">
-                    </div>
-                  </div>
-                </form> 
-              </div>
-              <div class="col-md-6">                
-                <image id="phone" src="img/phone.jpg" class="img-responsive" alt="Antique Phone">
-				<br><br><br>
-				<div class="messages" id="success"></div>
- 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer style="background-color: #111;" class="section-inverse">
-      <div class="container"> 
-        <div class="row copyright">
-          <div class="col-md-6">
-            <p>&copy;2016 Sean Henry</p>
-          </div>
-          <div class="col-md-6">            
-          </div>
-        </div>
-      </div>
-    </footer>
-	
+		}
+		ajax.send( formdata );
+	}
+</script>
+<section id="contact" style="background-color: #fff;" class="text-page"> 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="heading">Contact</h2>
+				<div class="row">
+					<div class="col-md-6">                				
+						<form id="contact-form" onsubmit="submitForm(); return false;" class="contact-form">		
+							<div class="controls">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="name" id="name_label">Your first name *</label>					
+											<input type="text" name="firstname" id="fname" value="" placeholder="Enter your first name" required="required" class="form-control" data-error="First name is required.">	  
+											<div class="help-block with-errors"></div>						  
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="surname">Your last name *</label>							
+											<input type="text" name="surname" id="lname" value="" placeholder="Enter your  last name" required="required" class="form-control" data-error="Lastname is required.">			  
+											<div class="help-block with-errors"></div>						  
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email">Your email *</label>						
+									<input type="email" name="email" id="email" value="" placeholder="Enter your  email" required="required" class="form-control" data-error="Your email is required.">		  
+									<div class="help-block with-errors"></div>					  
+								</div>
+								<div class="form-group">
+									<label for="message">Your message for me *</label>						
+									<textarea rows="4" name="message" id="message" placeholder="Enter your message" required="required" class="form-control" data-error="Please leave me a message."></textarea>		  
+									<div class="help-block with-errors"></div>					  
+								</div>
+								<div class="text-center">
+									<input type="submit" name="submit" id="submit" value="Send message" class="btn btn-primary btn-block">
+								</div>
+							</div>
+						</form> 
+					</div>
+					<div class="col-md-6">                
+						<image id="phone" src="img/phone.jpg" class="img-responsive" alt="Antique Phone">
+						<br><br><br>
+						<div class="messages" id="success"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end contact -->
+
+<!-- footer -->
+<footer style="background-color: #111;" class="section-inverse">
+	<div class="container"> 
+		<div class="row copyright">
+			<div class="col-md-6">
+				<p>&copy;2016 Sean Henry</p>
+			</div>			
+		</div>
+	</div>
+</footer>
+<!-- end footer -->	
 	
 <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -365,10 +367,12 @@
                             <h2>SQL Server Library Database</h2>
                             <hr class="star-primary">
                             <img src="img/library.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
+                            <p>I created a library database in SQL Server to track books in stock, books checked out, branch locations, card holders, etc. Included are a few queries and stored procedures. Click below to check out the repo on GitHub!</p>							
+							<a href="https://github.com/HenryTech/LibraryManagerSQLProject" target="_blank">Library Manager SQL Project</a>
+							<br><br>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    <strong><a href="http://startbootstrap.com">The Tech Academy</a>
                                     </strong>
                                 </li>
                                 <li>Date:
@@ -379,7 +383,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -402,8 +406,10 @@
                             <h2>Pizza Order Form</h2>
                             <hr class="star-primary">
                             <img src="img/pizza.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
+                            <p>I created a pizza order form using HTML5, CSS3 and JavaScript (with a bit of JQuery) that tracks size and toppings as well as price, then outputs an itemized invoice once order is complete. Click below to see the repo on GitHub!</p>
+							<a href="https://github.com/HenryTech/PizzaOrderForm" target="_blank">Pizza Order Form</a>
+							<br><br>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -416,7 +422,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -439,8 +445,10 @@
                             <h2>File Transfer App</h2>
                             <hr class="star-primary">
                             <img src="img/files.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
+                            <p>This is an app, created in Python 3, that includes a GUI. This is a tool to be used to make backups from a working directory to a transfer holding area. This app will track the time backups were last made and only copy files that were modified or created since that last backup. It also allows the user to set source and destination directories. Click below to check out the repo on GitHub!</p>
+							<a href="https://github.com/HenryTech/Python-File-Transfer" target="_blank">File Transfer App</a>
+							<br><br>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -453,7 +461,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -476,8 +484,10 @@
                             <h2>Home DVD Database</h2>
                             <hr class="star-primary">
                             <img src="img/dvd.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
+                            <p>Using ASP.NET and the entity framework code-first method, I created this database to track the location of DVDs in my house. It also tracks writer, director, and featured actors in each movie. This is very much a work-in-progress. Click below to see the repo on GitHub!</p>
+							<a href="https://github.com/HenryTech/HenryDVD" target="_blank">Home DVD Database</a>
+							<br><br>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -490,7 +500,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -513,18 +523,20 @@
                             <h2>Text-Based Horror</h2>
                             <hr class="star-primary">
                             <img src="img/horror.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>This is a collaborative effort by students of <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>. It's a text-based game written in JavaScript, using HTML5 and CSS3 for the front end. I worked intensively on this app for two weeks using the Scrum/Agile method to burn down a backlog of bug fixes and feature adds. My contributions include multiple front-end tweaks, as well as a working (and good-looking) contact page and an entirely new save system that utilizes the browser's back button. Click below to see the repo on GitHub, or on "Browser Game" to play the live product!</p>
+							<a href="https://github.com/TextBasedHorror/TextBasedHorror" target="_blank">Text-Based Horror</a>
+							<br>
                             <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    <strong><a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    <strong>Jan 2017
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    <strong><a href="http://textbasedhorror.com/">Browser Game</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -547,11 +559,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Student Database</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
+                            <img src="img/students.jpg" class="img-responsive img-centered" alt="">
+                            <p>Using Visual Studio 2015, I created a C# console app that tracks up to 20 students (expandable indefinitely) along with their scores for several tests. Instead of using a database, I used a struct array to actually hold the student and test data, just to see if I could do it. There are several built-in queries, too. Click below to see the repo on GitHub!</p>
+							<a href="https://github.com/HenryTech/StudentRecords" target="_blank">Student Database</a>
+							<br><br>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -564,7 +578,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -583,8 +597,8 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	
     <!-- jQuery Cookie - For Demo Purpose-->
     <script src="js/jquery.cookie.js"></script>
-    <!-- Lightbox-->
-    <script src="js/ekko-lightbox.js"> </script>
+    <!-- Lightbox
+    <script src="js/ekko-lightbox.js"> </script> -->
     <!-- Sticky + Scroll To scripts for navbar-->
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
@@ -593,7 +607,7 @@
     <script src="js/gmaps.js"></script>
     <!-- main script-->
     <script src="js/front.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!-- Google Analytics-->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

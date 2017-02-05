@@ -160,3 +160,7 @@
   opacity: 0;
   display: none;
 }
+
+#phone {
+	height: 295px;
+}
