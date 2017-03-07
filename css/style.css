@@ -1150,6 +1150,7 @@ a.list-group-item.active > .badge,
 
 #phone {
 	height: 295px;
+  margin-top: 25px;
 }
 
 #bigname {
