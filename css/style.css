@@ -1037,7 +1037,7 @@ a.list-group-item.active > .badge,
 }
 
 .portpix {
-	height: 250px;
+	max-height: 250px;
 }
 
 
